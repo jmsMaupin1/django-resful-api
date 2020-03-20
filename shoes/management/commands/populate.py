@@ -12,6 +12,11 @@ shoe_types = [
     'Dress', 'Other'
 ]
 
+manufacturer_list = [
+    'Nike', 'Adidas', 'New Balance',
+    'ASICS', 'PUMA', 'Sketchers'
+]
+
 class Command(BaseCommand):
     help = 'Pre-populate database with information about shoes'
 
@@ -23,6 +28,10 @@ class Command(BaseCommand):
         for idx, st in enumerate(shoe_types):
             new_type = ShoeType(idx, st)
             new_type.save()
+        
+        for idx, manufacturer in enumerate(manufacturer_list):
+            new_manufacturer = Manufacturer(idx, manufacturer)
+            new_manufacturer.save()
     
     def handle(self, *args, **kwargs):
         self._build_database()
