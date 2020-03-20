@@ -9,6 +9,7 @@ class Manufacturer(models.Model):
 class ShoeType(models.Model):
     style = models.CharField(max_length=50)
 
+
 class ShoeColor(models.Model):
     RED = 'RED'
     ORANGE = 'ORANGE'
