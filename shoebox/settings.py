@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'shoes.apps.ShoesConfig'
+    'shoes.apps.ShoesConfig',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
